@@ -1,0 +1,175 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Videos Random.</title>
+  <link rel="icon" type="image/png" href="{% static 'favicon.png' %}">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.1.0/darkly/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+  <link rel="stylesheet" href="{% static 'ENTORNOS/static' %}">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+        </ul>
+      
+        <!-- Nueva estructura del botón Search al lado del buscador -->
+        <form class="d-flex">
+          <input class="form-control me-sm-2" type="search" placeholder="Search">
+          <button class="btn btn-secondary my-2 my-sm-0 ms-2" type="submit">Search</button>
+        </form>
+        
+        <nav>
+          <ul>
+            <li><a href="{% url 'inicio' %}">Regresar al login</a></li>
+          </ul>
+        </nav>
+        
+      </div>
+    </div>
+  </nav>
+  <header>
+    <!-- Aquí continúa el resto del contenido de tu página -->
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval="3000" data-wrap="true">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'wallpapersden.com_anime-friends-hd-night_1366x768.jpg' %}" class="d-block w-100" alt=" ">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'wallpapersden.com_anime-naruto-hd-2023-ai_1366x768.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'wallpapersden.com_call-of-duty-modern-warfare-2022_1366x768.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <br/> 
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="video-container">
+              <video controls class="card-img-top">
+                <source src="{% static 'videorandon.mp4' %}" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+              </video>
+            </div>
+            <h5 class="card-title">Tomura Shigaraki Momentos randon</h5>
+            <p class="card-text">¡Oh chico, este es una locura! ¡Es a la vez un personaje loco y alguien que me intriga desde una perspectiva puramente de voz!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="video-container">
+              <video controls class="card-img-top">
+                <source src="{% static 'videorando1.mp4' %}" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+              </video>
+            </div>
+            <h5 class="card-title">Momentos Rando de Naruto</h5>
+            <p class="card-text"></p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="video-container">
+              <video controls class="card-img-top">
+                <source src="{% static 'momentosrando2.mp4' %}" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+              </video>
+            </div>
+            <h5 class="card-title">MOMENTOS Randon DE SAITAMA </h5>
+            <p class="card-text">ONE PUNCH MAN AUDIO LATINO</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+        <br/> 
+        <br/> 
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <div class="video-container">
+                  <video controls class="card-img-top">
+                    <source src="{% static 'xd.mp4' %}" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                  </video>
+                </div>
+                <h5 class="card-title">MOMENTOS XD DE El INCREÍBLE MUNDO DE GUMBALL</h5>
+                <p class="card-text"> XD</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <div class="video-container">
+                  <video controls class="card-img-top">
+                    <source src="{% static 'memesxd.mp4' %}" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                  </video>
+                </div>
+                <h5 class="card-title">Memes v:</h5>
+                <p class="card-text"></p>
+              </div>                                    
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <div class="video-container">
+                  <video controls class="card-img-top">
+                    <source src="{% static 'VERT.mp4' %}" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                  </video>
+                </div>
+                <h5 class="card-title">Vete a la Versh</h5>
+                <p class="card-text"></p>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <footer>
+      <p>Gracias :V</p>
+    </footer>
+
+  </header>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

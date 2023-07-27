@@ -1,0 +1,142 @@
+
+{% block content %}
+
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login :V</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="icon" type="image/png" href="{% static 'favicon.png' %}">
+
+    <link rel="stylesheet" href="{% static 'ENTORNOS/static' %}">
+    <li><a href="{% url 'pagina1' %}">Página 1</a></li>
+    <li><a href="{% url 'login' %}">Iniciar sesión</a></li>
+  </head>
+  <body>
+    <header>
+
+
+        <style>
+            body {
+                background-image: url("{% static 'fondo.jpg' %}");
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+            }
+       
+    
+  .form {
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 5px;
+    text-align: center;
+    /* Ajustes para centrar el cuadro */
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Aumento del tamaño de la fuente */
+    font-size: 20px;
+  }
+
+  .form h1 {
+    margin-bottom: 20px;
+    /* Aumento del tamaño de la fuente para el encabezado */
+    font-size: 30px;
+  }
+
+  .form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #d4d0d0;
+    border-radius: 5px;
+    /* Aumento del tamaño de la fuente para los campos de entrada */
+    font-size: 15px;
+  }
+
+  .form button {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #6a4747;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    /* Aumento del tamaño de la fuente para el botón */
+    font-size: 16px;
+  }
+
+  .form button:hover {
+    background-color: #748ab4;
+  }
+
+  .form .message {
+    margin-top: 20px;
+    /* Ajustes para centrar el mensaje */
+    text-align: center;
+  }
+
+  .form .message a {
+    color: #007bff;
+  }
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+  <div class="form">
+
+    <form class="login-form" method="post">
+      {% csrf_token %}
+    
+      <div class="container">
+        <div>
+          <label for="username">Usuario</label>
+          <input type="text" id="username" placeholder="Username" required name="username" />
+        </div>
+        <div>
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" placeholder="Password" required name="password" />
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col">
+      
+            <!-- Corrected button with underlined link -->
+            <form class="d-flex" method="post" action="{% url 'login' %}">
+              <button class="btn btn-secondary my-2 my-sm-0" type="submit">
+                <i class="fa-solid fa-user fa-lg"></i> <a href="{% url 'pagina1' %}">Login</a>
+              </button>
+            </form>
+      
+          </div>
+        </div>
+      </div>
+      <style>
+        /* Style for the underlined link in the button on hover */
+        .btn a:hover {
+          text-decoration: underline; /* Add underline to the link inside the button on hover */
+        }
+      </style>
+   
+    </form>
+  </div>
+   
+</body>
+</html>
+
+{% endblock %}
